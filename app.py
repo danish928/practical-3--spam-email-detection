@@ -29,5 +29,4 @@ user_msg = st . text_area (" Enter Email Message ")
 if st . button (" Check ") :
 msg_vec = vectorizer . transform ([ user_msg ])
 pred = model . predict ( msg_vec ) [0]
-st . write (" Result : ** Spam Email **" if pred == 1 else " Result : ** Not Spam
-Email **")
+st . write (" Result : ** Spam Email **" if pred == 1 else " Result : ** Not Spam Email **")
