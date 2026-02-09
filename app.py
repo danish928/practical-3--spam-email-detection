@@ -26,7 +26,7 @@ model = LinearSVC ( C =1.0 , random_state =42)
 model . fit ( X_train , y_train )
 st . write ( f" Model Accuracy : { accuracy_score (y_test , model . predict ( X_test ))}")
 user_msg = st . text_area (" Enter Email Message ")
-if st . button (" Check ") :
+  if st . button (" Check ") :
 msg_vec = vectorizer . transform ([ user_msg ])
 pred = model . predict ( msg_vec ) [0]
 st . write (" Result : ** Spam Email **" if pred == 1 else " Result : ** Not Spam Email **")
