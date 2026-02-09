@@ -4,14 +4,18 @@ from sklearn . svm import LinearSVC
 from sklearn . model_selection import train_test_split
 from sklearn . metrics import accuracy_score
 st . title (" Spam Email Detector ")
-emails = [" Win a free iPhone now ", " Meeting at 11 am tomorrow ", "
-Congratulations you won lottery ",
-" Project discussion with team ", " Claim your prize immediately ", "
-Please find the attached report ",
-" Limited offer buy now", " Urgent offer expires today ", " Schedule
-the meeting for Monday ",
-"You have won a cash prize ", " Monthly performance report attached ",
-" Exclusive deal just for you"]
+emails = [" Win a free iPhone now ", 
+          " Meeting at 11 am tomorrow ",
+          "Congratulations you won lottery ",
+          " Project discussion with team ",
+          " Claim your prize immediately ",
+          "Please find the attached report ",
+          " Limited offer buy now",
+          " Urgent offer expires today ",
+          " Schedule the meeting for Monday ",
+          "You have won a cash prize ",
+          " Monthly performance report attached ",
+          " Exclusive deal just for you"]
 labels = [1 , 0 , 1 , 0 , 1 , 0 , 1 , 1 , 0 , 1 , 0 , 1]
 vectorizer = TfidfVectorizer ( lowercase = True , stop_words =" english ",
 ngram_range =(1 , 2) , max_df =0.9 , min_df =1)
